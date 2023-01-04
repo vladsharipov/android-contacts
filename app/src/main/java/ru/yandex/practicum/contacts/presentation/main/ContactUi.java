@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import ru.yandex.practicum.contacts.model.ContactType;
-import ru.yandex.practicum.contacts.presentation.base.ListDiffCallback;
 import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
 
 public class ContactUi<ContactUi> implements ListDiffInterface<ContactUi> {
@@ -56,7 +55,7 @@ public class ContactUi<ContactUi> implements ListDiffInterface<ContactUi> {
         return types.equals(contact.types);
     }
     @Override
-    public boolean theSameAs(@NonNull ContactUi newItem){
+    public boolean theSameAs(ContactUi newItem){
         return this.hashCode() == newItem.hashCode();
     }
     @Override
